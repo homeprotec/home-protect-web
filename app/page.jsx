@@ -1,7 +1,35 @@
 export default function Home() {
   return (
-    <main style={{fontFamily:"Arial, sans-serif", margin:0}}>
-    {/* HEADER */}
+<main style={{fontFamily:'Arial', padding:'40px'}}>
+
+{/* HEADER */}
+<header style={{
+  display:"flex",
+  alignItems:"center",
+  justifyContent:"space-between",
+  marginBottom:"40px"
+}}>
+  <div style={{display:"flex", alignItems:"center", gap:"15px"}}>
+    <img src="/logo.png" width="60"/>
+    <h2 style={{margin:0}}>HOME PROTECT</h2>
+  </div>
+
+  <a href="https://wa.me/5252282120997" target="_blank">
+    <button style={{
+      background:"#25D366",
+      color:"#fff",
+      border:"none",
+      padding:"12px 18px",
+      borderRadius:"8px",
+      cursor:"pointer",
+      fontWeight:"bold"
+    }}>
+      Cotizar por WhatsApp
+    </button>
+  </a>
+</header>
+
+      {/* HEADER */}
 <header style={{
   display:"flex",
   alignItems:"center",
@@ -189,5 +217,6 @@ const card = {
 
   </div>
 </section>
+
 
 
