@@ -2,46 +2,65 @@ export default function Home() {
   return (
     <main style={{fontFamily:"Arial, sans-serif", margin:0}}>
 
-      {/* HERO */}
-      <section style={{
+      {/* NAVBAR */}
+      <nav style={{
         background:"#020617",
         color:"white",
-        padding:"90px 20px",
+        padding:"15px 40px",
+        display:"flex",
+        justifyContent:"space-between",
+        alignItems:"center",
+        position:"sticky",
+        top:0
+      }}>
+        <h2>HOME PROTECT</h2>
+        <a href="https://wa.me/522228120997"
+          style={{
+            background:"#22c55e",
+            padding:"10px 20px",
+            borderRadius:"6px",
+            color:"white",
+            textDecoration:"none",
+            fontWeight:"bold"
+          }}>
+          WhatsApp
+        </a>
+      </nav>
+
+      {/* HERO */}
+      <section style={{
+        background:"linear-gradient(90deg,#020617,#0f172a)",
+        color:"white",
+        padding:"100px 20px",
         textAlign:"center"
       }}>
-        <h1 style={{fontSize:"50px", marginBottom:"15px"}}>
-          HOME PROTECT
+        <h1 style={{fontSize:"52px"}}>
+          Ingeniería en Seguridad Electrónica
         </h1>
 
-        <h2 style={{fontWeight:"normal"}}>
-          Ingeniería en seguridad electrónica y redes
-        </h2>
-
-        <p style={{maxWidth:"700px", margin:"20px auto"}}>
-          Implementamos soluciones integrales de videovigilancia,
-          control de acceso, redes e infraestructura eléctrica
-          para hogares, negocios e industria.
+        <p style={{maxWidth:"750px", margin:"20px auto"}}>
+          Protegemos hogares, negocios e industria con tecnología
+          de videovigilancia, redes y control de accesos de nivel profesional.
         </p>
 
         <a href="https://wa.me/522228120997"
           style={{
             background:"#2563eb",
-            padding:"16px 35px",
+            padding:"18px 35px",
             color:"white",
             borderRadius:"8px",
             textDecoration:"none",
             fontWeight:"bold",
             display:"inline-block",
-            marginTop:"25px"
+            marginTop:"20px"
           }}>
-          Solicitar cotización inmediata
+          Cotizar proyecto
         </a>
       </section>
 
-
       {/* SERVICIOS */}
       <section style={{padding:"70px 20px", textAlign:"center"}}>
-        <h2 style={{fontSize:"32px"}}>Soluciones Profesionales</h2>
+        <h2 style={{fontSize:"32px"}}>Servicios especializados</h2>
 
         <div style={{
           display:"grid",
@@ -49,34 +68,18 @@ export default function Home() {
           gap:"25px",
           marginTop:"45px"
         }}>
-
-          <div style={card}>
-            🎥 Videovigilancia IP y CCTV profesional
-          </div>
-
-          <div style={card}>
-            🔐 Sistemas de control de accesos
-          </div>
-
-          <div style={card}>
-            ⚡ Sistemas perimetrales electrificados
-          </div>
-
-          <div style={card}>
-            📡 Enlaces inalámbricos y redes WiFi empresariales
-          </div>
-
-          <div style={card}>
-            🧠 Configuración de equipos de cómputo
-          </div>
-
-          <div style={card}>
-            🏢 Cableado estructurado y electricidad
-          </div>
-
+          {[
+            "Videovigilancia IP y CCTV",
+            "Control de accesos",
+            "Sistemas perimetrales",
+            "Radio enlaces",
+            "Cableado estructurado",
+            "Electricidad residencial e industrial"
+          ].map((item)=>(
+            <div style={card}>{item}</div>
+          ))}
         </div>
       </section>
-
 
       {/* COBERTURA */}
       <section style={{
@@ -84,59 +87,41 @@ export default function Home() {
         padding:"70px 20px",
         textAlign:"center"
       }}>
-        <h2>Cobertura regional</h2>
-
-        <p>
-          Operamos en los estados de:
-        </p>
-
-        <h3>Puebla • Tlaxcala • Veracruz • Morelos</h3>
+        <h2>Cobertura</h2>
+        <h3>Puebla · Tlaxcala · Veracruz · Morelos</h3>
       </section>
 
-
-      {/* POR QUE ELEGIRNOS */}
-      <section style={{padding:"70px 20px", textAlign:"center"}}>
-        <h2>Por qué elegir HOME PROTECT</h2>
-
-        <div style={{maxWidth:"700px", margin:"auto"}}>
-          <p>✔ Instalaciones con estándares profesionales</p>
-          <p>✔ Equipos de marcas líderes del mercado</p>
-          <p>✔ Soporte técnico y mantenimiento</p>
-          <p>✔ Diagnóstico y asesoría sin compromiso</p>
-          <p>✔ Atención inmediata vía WhatsApp</p>
-        </div>
-      </section>
-
-
-      {/* CONTACTO */}
+      {/* CTA */}
       <section style={{
         background:"#020617",
         color:"white",
         padding:"70px 20px",
         textAlign:"center"
       }}>
-        <h2>Contacto</h2>
-        <p>WhatsApp: 222 812 0997</p>
-        <p>Email: homeprotecc.es@gmail.com</p>
+        <h2>Solicita tu cotización</h2>
+        <p>Atención inmediata por WhatsApp</p>
+        <a href="https://wa.me/522228120997"
+          style={{
+            background:"#22c55e",
+            padding:"18px 35px",
+            borderRadius:"8px",
+            color:"white",
+            textDecoration:"none",
+            fontWeight:"bold"
+          }}>
+          Enviar mensaje
+        </a>
       </section>
 
-
-      {/* BOTON WHATSAPP */}
-      <a href="https://wa.me/522228120997"
-         style={{
-           position:"fixed",
-           bottom:"20px",
-           right:"20px",
-           background:"#22c55e",
-           color:"white",
-           padding:"16px 22px",
-           borderRadius:"50px",
-           textDecoration:"none",
-           fontWeight:"bold",
-           boxShadow:"0 4px 12px rgba(0,0,0,0.3)"
-         }}>
-         WhatsApp
-      </a>
+      {/* FOOTER */}
+      <footer style={{
+        background:"#020617",
+        color:"#94a3b8",
+        textAlign:"center",
+        padding:"25px"
+      }}>
+        © 2026 HOME PROTECT — Sistemas de seguridad y redes
+      </footer>
 
     </main>
   )
@@ -150,4 +135,3 @@ const card = {
   fontWeight:"bold",
   fontSize:"18px"
 }
-
