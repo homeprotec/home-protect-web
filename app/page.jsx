@@ -135,3 +135,32 @@ const card = {
   fontWeight:"bold",
   fontSize:"18px"
 }
+{/* GALERIA */}
+<section style={{
+  padding:"80px 20px",
+  background:"#f8fafc",
+  textAlign:"center"
+}}>
+  <h2 style={{fontSize:"32px", marginBottom:"10px"}}>
+    Proyectos realizados
+  </h2>
+
+  <p style={{color:"#555"}}>
+    Instalaciones reales realizadas por HOME PROTECT
+  </p>
+
+  <div style={{
+    marginTop:"40px",
+    display:"grid",
+    gridTemplateColumns:"repeat(auto-fit,minmax(280px,1fr))",
+    gap:"25px"
+  }}>
+    
+    <img src="/imagenes/camara1.jpg" style={{width:"100%", borderRadius:"12px"}}/>
+    <img src="/imagenes/camara2.jpg" style={{width:"100%", borderRadius:"12px"}}/>
+    <img src="/imagenes/camara3.jpg" style={{width:"100%", borderRadius:"12px"}}/>
+    <img src="/imagenes/instalacion1.jpg" style={{width:"100%", borderRadius:"12px"}}/>
+
+  </div>
+</section>
+
